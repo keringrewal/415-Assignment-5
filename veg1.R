@@ -80,7 +80,11 @@ ru5 <- ru4 %>% separate("number", c("reference", "b"), sep = -1)
 ru5$a <- NULL
 ru5$b <- NULL
 
+tox.vals <- read_xlsx("Toxicity Values.xlsx")
 
+vals <- merge(tox.vals, ru5, by="chem")
+
+vals
 ## get CAS #
 
 ## find info at https://cfpub.epa.gov/ecotox/  (go to beta)
