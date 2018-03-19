@@ -32,6 +32,30 @@ X2015 <- read_table2("2015.csv")
 X2016 <- read_table2("2016.csv")
 X2017 <- read_table2("2017.csv")
 
+years <- c(1987:2017)[-27]
+x = length(years)
+
+filenames <- str_c("X", years, sep = "")
+
+for (i in 1:x){
+  
+  the_year <- get(filenames[i])
+  
+  year <- filter(the_year, 'hh'==12)
+  year <- year %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
+  year <- year[-c(1:19),]
+  
+  
+  if(i == 1){
+    yeardata <- year
+  }
+  
+  else{
+    yeardata <- rbind.data.frame(yeardata, year)
+  }
+  
+}
+
 yr1985<- filter(X1985, `hh`==12 )
 yr1985 <- yr1985 %>% select(`MM`, `DD`, `ATMP`, `WTMP`) 
 yr1985 <- yr1985[-c(1:19),]
@@ -48,7 +72,6 @@ yr1988 <- yr1988 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 yr1990<- filter(X1990, `hh`==12 )
 yr1990 <- yr1990 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 
-X1991 <- dataset
 yr1991<- filter(X1991, `hh`==12 )
 yr1991 <- yr1991 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 
@@ -126,3 +149,4 @@ yr2016 <- yr2016 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 
 yr2017<- filter(X2010, `hh`==12 )
 yr2017 <- yr2017 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
+
