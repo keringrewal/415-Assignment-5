@@ -56,8 +56,16 @@ for (i in 1:x){
   
 }
 
+mydata2 <- my_data %>% mutate(ATMP = as.numeric(ATMP), 
+                  WTMP = as.numeric(WTMP), 
+                  MM = as.integer(MM), 
+                  DD = as.integer(DD)) %>% 
+  mutate(ATMP = ifelse(ATMP == 999, NA, ATMP)) %>% 
+  mutate(ATMP = ifelse(ATMP == 999.0, NA, ATMP)) %>% 
+  mutate(WTMP = ifelse(WTMP == 999, NA, WTMP)) %>% 
+  unite("Date", c("YYYY", "MM", "DD"), sep = "-") %>% 
+  mutate(Date = as.Date(Date))
 
-#rbind 
 #as date
 #mutate
 #ATMP = as.numeric(ATMP) 
