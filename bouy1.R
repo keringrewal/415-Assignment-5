@@ -4,54 +4,62 @@ library(stringr)
 
 # Read in data from website
 
-url <- "http://www.ndbc.noaa.gov/view_text_file.php?filename=46035h"
+url1 <- "http://www.ndbc.noaa.gov/view_text_file.php?filename=46035h"
 url2 <- ".txt.gz&dir=data/historical/stdmet/"
 
-years <- c(1987:2017)[-27] #2013 is not available
+years <- c(1985:2017)[-29]
 
-urls <- str_c(url, years, url2, sep = "")
+years <- str_c(url1, years, url2, sep = "")
 
-filenames <- str_c("mr", years, sep = "")
+filenames <- str_c("yr", years, sep = "")
 
-N <- length(urls)
 
-for (i in 1:N){
+# separates file into each year
+
+x <- length(years)
+
+for (i in 1:x){
   suppressMessages(
-    assign(filenames[i], read_table(urls[i], col_names = TRUE))
+    assign(filenames[i], read_table(years[i], col_names = TRUE))
   )
   
   file <- get(filenames[i])
   
   colnames(file)[1] <-"YYYY"
   
-  if (i < 19) {
+  if (i < 21) {
     file <- file %>% mutate(mm = "00")
   }
   
+  file <- filter(file, `hh`==12 )
   file <- file %>% select(YYYY, MM, DD, hh, mm, ATMP, WTMP)
   
-  if (i >= 21) {
+  if (i >= 23) {
     file <- file[-1,]
   }
   
-  # put '19' in front of 2 digit years
-  if (i >= 27) {
-    file[1] <- i + 1987
-  }
-  else{
-    file[1] <- i + 1986
+  if (i < 15) {
+    file[1] <- 1900 + file[1]
   }
   
   
   
   if(i == 1){
-    MR <- file
+    my_data <- file
   }
   
   else{
-    MR <- rbind.data.frame(MR, file)
+    my_data <- rbind.data.frame(my_data, file)
   }
   
   
   
 }
+
+
+#rbind 
+#as date
+#mutate
+#ATMP = as.numeric(ATMP) 
+#WTMP = replace(WTMP, WTMP == 999, NA) 
+
