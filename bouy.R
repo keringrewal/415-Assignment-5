@@ -59,11 +59,7 @@ for (i in 1:x){
 }
 
 yr1985<- filter(X1985, `hh`==12 )
-<<<<<<< HEAD
-yr1985 <- yr1985 %>% select(`MM`, `DD`, `ATMP`, `WTMP`) 
-=======
 yr1985 <- yr1985 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
->>>>>>> 4c50887fe4c026897448915f6388dc6043e19acb
 
 yr1986<- filter(X1986, `hh`==12 )
 yr1986 <- yr1986 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
@@ -174,24 +170,16 @@ matrix(data2016, ncol=2)
 years <- c(1987:2017)[-27]
 x = length(years)
 
-filenames <- str_c(`data`, years, sep = "")
+filenames <- str_c("data", years, sep = "")
 
-<<<<<<< HEAD
-
-filenames <- str_c("yr", years, sep = "")
 filenames 
 
 files <- rbind()
 files
 
 
-
-
-
-  
-=======
 for(i in 1:x) {
-  file <- get(filename[i])
+  file <- get(filenames[i])
   info <- matrix(file, ncol=2)
   if (i == 1){
     table <- info
@@ -200,4 +188,14 @@ for(i in 1:x) {
     table <- rbind.data.frame(table, info)
   }
 }
->>>>>>> 4c50887fe4c026897448915f6388dc6043e19acb
+
+#Time series code 
+
+ts1 <- read.csv('BP monthly summaries.csv')
+ts1 <- ts1[2:18, 2:13]
+
+ts2 <- as.vector(t(ts1))
+
+ts3 <- ts(ts2, start = c(2000, 1), frequency=12)
+
+ts.plot(ts3, gpars=list(xlab="year", ylab="Apprehensions", col= 'green', lty=c(1:3), main = "Time Series of Montly Summaries of BP Apprehensions from 2000 to 2017"))
