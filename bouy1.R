@@ -59,8 +59,7 @@ mydata2 <- my_data %>% mutate(ATMP = as.numeric(ATMP),
                               WTMP = as.numeric(WTMP), 
                               MM = as.integer(MM), 
                               DD = as.integer(DD)) %>%
-  mutate(ATMP = ifelse(ATMP == 999, NA, ATMP)) %>% 
-  mutate(ATMP = ifelse(ATMP == 999.0, NA, ATMP)) %>% 
+  mutate(ATMP = ifelse(ATMP >= 99.0, NA, ATMP)) %>%
   mutate(WTMP = ifelse(WTMP == 999, NA, WTMP)) %>%
   mutate(WTMP = ifelse(WTMP == 999.0, NA, WTMP))
 
@@ -70,6 +69,7 @@ mydata2 <- na.omit(mydata2)
 ATMPavgs <- mydata2 %>% 
   group_by(YYYY) %>%
   summarise(mean = mean(ATMP), n= n())
+
 #average water temperature for each year 
 WTMPavgs <- mydata2 %>% 
   group_by(YYYY) %>%
