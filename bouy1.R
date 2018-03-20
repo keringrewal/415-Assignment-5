@@ -13,12 +13,12 @@ years <- str_c(url1, years, url2, sep = "")
 
 filenames <- str_c("yr", years, sep = "")
 
-
 # separates file into each year
 
 x <- length(years)
 
 for (i in 1:x){
+  
   suppressMessages(
     assign(filenames[i], read_table(years[i], col_names = TRUE))
   )
@@ -42,8 +42,7 @@ for (i in 1:x){
     file[1] <- 1900 + file[1]
   }
   
-  
-  
+
   if(i == 1){
     my_data <- file
   }
@@ -56,18 +55,29 @@ for (i in 1:x){
   
 }
 
+
+
 mydata2 <- my_data %>% mutate(ATMP = as.numeric(ATMP), 
                   WTMP = as.numeric(WTMP), 
                   MM = as.integer(MM), 
                   DD = as.integer(DD)) %>% 
+  unite("Date", c("YYYY", "MM", "DD"), sep = "-") %>% 
+  mutate(Date = as.Date(Date)) %>% 
   mutate(ATMP = ifelse(ATMP == 999, NA, ATMP)) %>% 
   mutate(ATMP = ifelse(ATMP == 999.0, NA, ATMP)) %>% 
-  mutate(WTMP = ifelse(WTMP == 999, NA, WTMP)) %>% 
-  unite("Date", c("YYYY", "MM", "DD"), sep = "-") %>% 
-  mutate(Date = as.Date(Date))
+  mutate(WTMP = ifelse(WTMP == 999, NA, WTMP))
 
 #as date
-#mutate
+#mutate%
 #ATMP = as.numeric(ATMP) 
 #WTMP = replace(WTMP, WTMP == 999, NA) 
 
+
+
+atmp_yr <- mean(mydata2$ATMP, na.rm = TRUE)
+wtmp_yr <- mean(mydata2$WTMP, na.rm = TRUE)
+data_yr <- c(atmp_yr, wtmp_yr)
+
+info <- matrix(data_yr, ncol=2)
+
+info
