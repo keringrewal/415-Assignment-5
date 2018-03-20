@@ -38,7 +38,7 @@ x = length(years)
 filenames <- str_c("X", years, sep = "")
 
 for (i in 1:x){
-  
+
   the_year <- get(filenames[i])
   
   year <- filter(the_year, 'hh'==12)
@@ -58,7 +58,6 @@ for (i in 1:x){
 
 yr1985<- filter(X1985, `hh`==12 )
 yr1985 <- yr1985 %>% select(`MM`, `DD`, `ATMP`, `WTMP`) 
-yr1985 <- yr1985[-c(1:19),]
 
 yr1986<- filter(X1986, `hh`==12 )
 yr1986 <- yr1986 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
@@ -68,6 +67,9 @@ yr1987 <- yr1987 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 
 yr1988<- filter(X1988, `hh`==12 )
 yr1988 <- yr1988 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
+
+yr1989<- filter(X1989, `hh`==12 )
+yr1989 <- yr1989 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 
 yr1990<- filter(X1990, `hh`==12 )
 yr1990 <- yr1990 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
@@ -150,3 +152,15 @@ yr2016 <- yr2016 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 yr2017<- filter(X2010, `hh`==12 )
 yr2017 <- yr2017 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 
+
+filenames <- str_c("yr", years, sep = "")
+filenames 
+
+files <- rbind()
+files
+
+
+
+
+
+  
