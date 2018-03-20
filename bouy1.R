@@ -55,29 +55,29 @@ for (i in 1:x){
   
 }
 
-
-
 mydata2 <- my_data %>% mutate(ATMP = as.numeric(ATMP), 
-                  WTMP = as.numeric(WTMP), 
-                  MM = as.integer(MM), 
-                  DD = as.integer(DD)) %>% 
-  unite("Date", c("YYYY", "MM", "DD"), sep = "-") %>% 
-  mutate(Date = as.Date(Date)) %>% 
+                              WTMP = as.numeric(WTMP), 
+                              MM = as.integer(MM), 
+                              DD = as.integer(DD)) %>%
   mutate(ATMP = ifelse(ATMP == 999, NA, ATMP)) %>% 
   mutate(ATMP = ifelse(ATMP == 999.0, NA, ATMP)) %>% 
-  mutate(WTMP = ifelse(WTMP == 999, NA, WTMP))
+  mutate(WTMP = ifelse(WTMP == 999, NA, WTMP)) %>%
+  mutate(WTMP = ifelse(WTMP == 999.0, NA, WTMP))
 
-#as date
-#mutate%
-#ATMP = as.numeric(ATMP) 
-#WTMP = replace(WTMP, WTMP == 999, NA) 
+mydata2 <- na.omit(mydata2)
 
 
+ATMPavgs <- mydata2 %>% 
+  group_by(YYYY) %>%
+  summarise(mean = mean(ATMP), n= n())
 
-atmp_yr <- mean(mydata2$ATMP, na.rm = TRUE)
-wtmp_yr <- mean(mydata2$WTMP, na.rm = TRUE)
-data_yr <- c(atmp_yr, wtmp_yr)
+WTMPavgs <- mydata2 %>% 
+  group_by(YYYY) %>%
+  summarise(mean = mean(WTMP), n= n())
 
-info <- matrix(data_yr, ncol=2)
+mydata3 <- mydata2 %>% 
+  unite("Date", c("YYYY", "MM", "DD"), sep = "-") %>% 
+  mutate(Date = as.Date(Date))
 
-info
+
+
