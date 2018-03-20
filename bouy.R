@@ -1,4 +1,6 @@
 library(readr)
+library(tidyverse)
+
 X1985 <- read_table2("1985.csv")
 X1986 <- read_table2("1986.csv")
 X1987 <- read_table2("1987.csv")
@@ -57,7 +59,11 @@ for (i in 1:x){
 }
 
 yr1985<- filter(X1985, `hh`==12 )
+<<<<<<< HEAD
 yr1985 <- yr1985 %>% select(`MM`, `DD`, `ATMP`, `WTMP`) 
+=======
+yr1985 <- yr1985 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
+>>>>>>> 4c50887fe4c026897448915f6388dc6043e19acb
 
 yr1986<- filter(X1986, `hh`==12 )
 yr1986 <- yr1986 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
@@ -148,10 +154,29 @@ yr2015 <- yr2015 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
 
 yr2016<- filter(X2016, `hh`==12 )
 yr2016 <- yr2016 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
+yr2016[] <- lapply(yr2016, function(x) as.numeric(as.character(x)))
+yr2016$ATMP[yr2016$ATMP==999] <- NA
+yr2016$WTMP[yr2016$WTMP==999] <- NA
+atmp2016 <- mean(yr2016$ATMP, na.rm = TRUE)
+wtmp2016 <- mean(yr2016$WTMP, na.rm = TRUE)
+data2016 <- c(atmp2016, wtmp2016)
 
 yr2017<- filter(X2010, `hh`==12 )
 yr2017 <- yr2017 %>% select(`MM`, `DD`, `ATMP`, `WTMP`)
+yr2017[] <- lapply(yr2017, function(x) as.numeric(as.character(x)))
+yr2017$ATMP[yr2017$ATMP==999] <- NA
+yr2017$WTMP[yr2017$WTMP==999] <- NA
+atmp2017 <- mean(yr2017$ATMP, na.rm = TRUE)
+wtmp2017 <- mean(yr2017$WTMP, na.rm = TRUE)
+data2017 <- c(atmp2017, wtmp2017)
 
+matrix(data2016, ncol=2)
+years <- c(1987:2017)[-27]
+x = length(years)
+
+filenames <- str_c(`data`, years, sep = "")
+
+<<<<<<< HEAD
 
 filenames <- str_c("yr", years, sep = "")
 filenames 
@@ -164,3 +189,15 @@ files
 
 
   
+=======
+for(i in 1:x) {
+  file <- get(filename[i])
+  info <- matrix(file, ncol=2)
+  if (i == 1){
+    table <- info
+  }
+  else{
+    table <- rbind.data.frame(table, info)
+  }
+}
+>>>>>>> 4c50887fe4c026897448915f6388dc6043e19acb
