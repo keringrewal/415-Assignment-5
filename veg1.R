@@ -33,6 +33,8 @@ tox.vals <- read_xlsx("Toxicity Values.xlsx")
 
 vals <- left_join(ru5, tox.vals, by="chem" )
 
+vals <- full_join(ru5, tox.vals, by="chem" )
+#it joins the chem columns as two different things so i think the naming must be off
 vals
 ## get CAS #
 ## find info at https://cfpub.epa.gov/ecotox/  (go to beta)
