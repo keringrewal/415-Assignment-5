@@ -42,13 +42,19 @@ tox.vals <- tox.vals %>% mutate(chem = str_trim(chem, side = "both")) %>%
   mutate(toxicity = as.numeric(toxicity))
 
 vals <- left_join(ru5, tox.vals, by="chem" )
-
-vals <- join(ru5, tox.vals, by="chem", type="full")
-#it joins the chem columns as two different things so i think the naming must be off
-
 vals
 
+ru6 <- ru %>% select("Commodity", "Domain", "quant")
+ru7 <- ru6 %>% separate(2, c("ru", "type"), sep = ",") 
+ru8 <- ru7 %>% separate(4, c("repeat", "chem"), sep = ":")
+ru9 <- ru8 %>% separate(5, c("space", "chem"), sep = 2)
+ru10 <- ru9 %>% separate(6, c("chem", "value"), sep = "=")
+ru11 <- ru10 %>% separate(6, c("chem", "spaces"), sep = -1)
+ru12 <- ru11 %>% separate(8, c("value", "spaces"), sep = -1)
+ru13 <- ru12 %>% select("Commodity", "type", "chem", "value")
 
+#full table of each vegetable and the toxicity of the chemcials present 
+ru14 <- full_join(ru13, tox.vals, by="chem")
 
 ## get CAS #
 ## find info at https://cfpub.epa.gov/ecotox/  (go to beta)
