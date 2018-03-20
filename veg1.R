@@ -1,73 +1,24 @@
 library(tidyverse)
 library(readxl)
+library(plyr)
+library(dplyr)
+
 
 veg.1 <- read_xlsx("veg1.xlsx")
-
-cnames.1 <- colnames(veg.1)
-
-## try
-# n_distinct(veg.1[,1])
-# 
-# n_distinct(veg.1[,2])
-# 
-# unique(veg.1[,2])
-
-## now get the count for each column
-
-c <- apply(veg.1, 2, n_distinct)
-#c
-
-
-c[c>1]
-
-
-d <- names(c[c==1])
-#d
-
-e <- names(c[c>1])
-#e
-
-
-veg.2 <- select(veg.1, e)
-
-cnames.2 <- colnames(veg.2)
-#cnames.2
-
+a <- apply(veg.1, 2, n_distinct)
+a[a>1]
+b <- names(a[a==1])
+c <- names(a[a>1])
+veg.2 <- select(veg.1, c)
 apply(veg.2, 2, n_distinct)
-
 veg.3 <- dplyr::rename(veg.2, 
                        Geo = `Geo Level`, 
                        State = `State ANSI`,
                        Data = `Data Item`,
                        Category = `Domain Category`)
+veg.4 <- separate(veg.3, Category, into = c("label", "quant"), sep=",")
 
-cnames.3 <- colnames(veg.3)
-#cnames.3
-
-# veg.3
-# 
-# unique(veg.3[,"Commodity"])
-# 
-# unique(veg.3[,"Data"]) %>% print(n=60)
-# 
-# unique(veg.3[,"Domain"])
-# 
-# unique(veg.3[,"Category"])
-# 
-# unique(veg.3[,"Value"])
-
-
-
-
-
-yy <- separate(veg.3, Category, into = c("label", "quant"), sep=",")
-# 
-# n_distinct(yy[,2])
-# 
-# 
-# unique(yy[,"label"]) %>% print(n=30)
-
-ru <- filter(yy, label=="RESTRICTED USE CHEMICAL")
+ru <- filter(veg.4, label=="RESTRICTED USE CHEMICAL")
 
 ru1 <- ru %>% select(label, quant) %>% unique()
 
@@ -82,11 +33,24 @@ ru5$b <- NULL
 
 tox.vals <- read_xlsx("Toxicity Values.xlsx")
 
-vals <- merge(tox.vals, ru5, by ="chem")
+ru5 <- ru5 %>% mutate(chem = str_trim(chem, side = "both")) %>% 
+  mutate(type = str_trim(type, side = "both")) %>%
+  mutate(reference = str_trim(reference, side = "both")) %>%
+  mutate(reference = as.numeric(reference))
+
+tox.vals <- tox.vals %>% mutate(chem = str_trim(chem, side = "both")) %>%
+  mutate(toxicity = as.numeric(toxicity))
+
+vals <- left_join(ru5, tox.vals, by="chem" )
+
+vals <- join(ru5, tox.vals, by="chem", type="full")
+#it joins the chem columns as two different things so i think the naming must be off
 
 vals
-## get CAS #
 
+
+
+## get CAS #
 ## find info at https://cfpub.epa.gov/ecotox/  (go to beta)
 ## or
 ## https://comptox.epa.gov/dashboard

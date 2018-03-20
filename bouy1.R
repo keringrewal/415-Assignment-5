@@ -66,18 +66,34 @@ mydata2 <- my_data %>% mutate(ATMP = as.numeric(ATMP),
 
 mydata2 <- na.omit(mydata2)
 
-
+#average air temperature for each year 
 ATMPavgs <- mydata2 %>% 
   group_by(YYYY) %>%
   summarise(mean = mean(ATMP), n= n())
-
+#average water temperature for each year 
 WTMPavgs <- mydata2 %>% 
   group_by(YYYY) %>%
   summarise(mean = mean(WTMP), n= n())
-
+#overall data with individual air and water temperature for each date in each year
 mydata3 <- mydata2 %>% 
   unite("Date", c("YYYY", "MM", "DD"), sep = "-") %>% 
   mutate(Date = as.Date(Date))
 
+#Time series code 
+ts1 <- mydata3
+ts1 <- ts1[2:8744, 4]
+ts2 <- as.vector(t(ts1))
+ts3 <- ts(ts2, start = c(1985, 1), frequency = 30)
+ts.plot(ts3, gpars=list(xlab="date", ylab="ATMP", col= 'green', lty=c(1:3), main = "Time Series of ATMP from 1985 to 2017"))
 
+#statistical testing comparing 1985 to 2017 
+t.test(mydata3[1:90,4], mydata3[8382:8744,4])
+#there is a difference between the air temp in 1985 and the air temp in 2017 
+t.test(mydata3[1:90,5], mydata3[8382:8744,5])
+#there is a difference between the water temp in 1985 and the water temp in 2017 
 
+#the sampling method did affect the evaluation of temperature change. 
+#the weather and amount of sunlight changes through out the day, making it so that
+#the water and air temperature can vary through out the day. 
+#limiting the sampling to just once a day takes away this aspect of the overall 
+#temperatures and can impact the overall determination of temperature change. 
