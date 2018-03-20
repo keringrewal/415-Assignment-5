@@ -86,6 +86,12 @@ ts2 <- as.vector(t(ts1))
 ts3 <- ts(ts2, start = c(1985, 1), frequency = 30)
 ts.plot(ts3, gpars=list(xlab="date", ylab="ATMP", col= 'green', lty=c(1:3), main = "Time Series of ATMP from 1985 to 2017"))
 
+ts4 <- mydata3
+ts4 <- ts4[2:8744, 5]
+ts5 <- as.vector(t(ts4))
+ts6 <- ts(ts5, start = c(1985, 1), frequency = 30)
+ts.plot(ts6, gpars=list(xlab="date", ylab="ATMP", col= 'green', lty=c(1:3), main = "Time Series of ATMP from 1985 to 2017"))
+
 #statistical testing comparing 1985 to 2017 
 t.test(mydata3[1:90,4], mydata3[8382:8744,4])
 #there is a difference between the air temp in 1985 and the air temp in 2017 
