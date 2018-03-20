@@ -82,7 +82,7 @@ ru5$b <- NULL
 
 tox.vals <- read_xlsx("Toxicity Values.xlsx")
 
-vals <- merge(tox.vals, ru5, by="chem")
+vals <- merge(tox.vals, ru5, by ="chem")
 
 vals
 ## get CAS #
