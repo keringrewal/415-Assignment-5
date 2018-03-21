@@ -64,15 +64,18 @@ mydata2 <- my_data %>% mutate(ATMP = as.numeric(ATMP),
 
 mydata2 <- na.omit(mydata2)
 
+
+
 #average air temperature for each year 
 ATMPavgs <- mydata2 %>% 
   group_by(YYYY) %>%
-  summarise(mean = mean(ATMP), n= n())
+  dplyr::summarise(mean = mean(ATMP), n= n())
 
 #average water temperature for each year 
 WTMPavgs <- mydata2 %>% 
   group_by(YYYY) %>%
-  summarise(mean = mean(WTMP), n= n())
+  dplyr::summarise(mean = mean(WTMP), n= n())
+
 #overall data with individual air and water temperature for each date in each year
 mydata3 <- mydata2 %>% 
   unite("Date", c("YYYY", "MM", "DD"), sep = "-") %>% 
@@ -89,12 +92,12 @@ ts4 <- mydata3
 ts4 <- ts4[2:8744, 5]
 ts5 <- as.vector(t(ts4))
 ts6 <- ts(ts5, start = c(1985, 1), frequency = 30)
-ts.plot(ts6, gpars=list(xlab="date", ylab="ATMP", col= 'green', lty=c(1:3), main = "Time Series of ATMP from 1985 to 2017"))
+ts.plot(ts6, gpars=list(xlab="date", ylab="ATMP", col= 'blue', lty=c(1:3), main = "Time Series of ATMP from 1985 to 2017"))
 
 #statistical testing comparing 1985 to 2017 
-t.test(mydata3[1:90,4], mydata3[8382:8744,4])
+t.test(mydata3$ATMP[1:90], mydata3$ATMP[8382:8744])
 #there is a difference between the air temp in 1985 and the air temp in 2017 
-t.test(mydata3[1:90,5], mydata3[8382:8744,5])
+t.test(mydata3$WTMP[1:90], mydata3$WTMP[8382:8744])
 #there is a difference between the water temp in 1985 and the water temp in 2017 
 
 #the sampling method did affect the evaluation of temperature change. 

@@ -84,9 +84,9 @@ mydata2 <- na.omit(mydata2)
 #average air temperature for each year 
 ATMPavgs <- mydata2 %>% 
   group_by(Year) %>%
-  dplyr::summarise("Mean" = mean(ATMP), "Number of Observations" = n())
+  dplyr::summarise('Mean' = mean(ATMP), 'Number of Observations' = n())
 
-kable(ATMPavgs, caption = "Air Temp Averages", "html") %>%
+kable(ATMPavgs, caption = "Air Temp Averages", "html", align = 'crc', digits = 2) %>%
   kable_styling() %>%
   scroll_box(height = "400px")
 
@@ -120,7 +120,7 @@ WTMPavgs <- mydata2 %>%
   group_by(Year) %>%
   dplyr::summarise(Mean = mean(WTMP), "Number of Observations"= n())
 
-kable(WTMPavgs, caption = "Water Temp Averages", "html") %>%
+kable(WTMPavgs, caption = "Water Temp Averages", "html", align = 'c', digits = 4) %>%
   kable_styling() %>%
   scroll_box(height = "400px")
 ```
