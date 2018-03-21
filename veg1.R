@@ -39,6 +39,7 @@ tox.vals <- tox.vals %>% mutate(chem = str_trim(chem, side = "both")) %>%
 
 vals <- left_join(ru5, tox.vals, by="chem" )
 vals
+matrix(vals$toxicity)
 
 ru6 <- ru %>% select("Commodity", "Domain", "quant")
 ru7 <- ru6 %>% separate(2, c("ru", "type"), sep = ",") 
@@ -51,7 +52,6 @@ ru13 <- ru12 %>% select("Commodity", "type", "chem")
 
 #full table of each vegetable and the toxicity of the chemcials present 
 ru14 <- full_join(ru13, tox.vals, by="chem")
-ru14
 
 #finding the average levels of toxicity for each vegetable
 ru15 <- ru14 %>% filter(Commodity=="BROCCOLI")
