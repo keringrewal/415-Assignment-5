@@ -1,11 +1,10 @@
-veg1 slides
-========================================================
-author: Janie Briglio and Kerin Grewal
-date: 3/19/18
-autosize: true
-
-Introduction
-========================================================
+---
+title: "vegSlides"
+author: "Janie Briglio and Kerin Grewel"
+date: "3/20/2018"
+output: ioslides_presentation
+---
+##Introduction
 We looked at information from USDA QuickStats and looked at the following information:
 - Commodity (broccoli, cauliflower, and other vegetables)
 - Product (pesticide, insecticide, etc.)
@@ -14,8 +13,7 @@ We looked at information from USDA QuickStats and looked at the following inform
 
 With this information, we wanted to find which chemicals were restricted use and how toxic they are when consumed.
 
-Cleaning the Data
-========================================================
+##Cleaning the Data
 The original data contained: 
 - repeated information that needed to be removed 
 - information that needed to be separated into separate groups
@@ -26,8 +24,7 @@ The data was cleaned and added to through pipes that:
 - joined tables together 
 
 
-Cleaned Table
-========================================================
+##Cleaned Table
 
 ```{r, echo=FALSE}
 library(readxl)
@@ -71,8 +68,8 @@ kable(ru13, caption = "Cleaned Data", "html") %>%
   scroll_box(height = "400px")
 ```
 
-Toxicity Table
-========================================================
+##Toxicity Table
+
 After finding the restricted use chemicals, we found the toxicity levels for each chemical.
 ```{r, echo=FALSE}
 library(readxl)
@@ -88,8 +85,8 @@ kable(tox.vals, caption = "Toxicity Table", "html") %>%
   scroll_box(height = "400px")
 ```
 
-Final Table 
-=========================================================
+##Final Table 
+
 Then we used dplyr to combine the data and see which vegetables had been exposed to which toxicity levels. 
 ```{r, echo=FALSE}
 library(readxl)
@@ -106,8 +103,8 @@ kable(ru14, caption = "Final Table", "html") %>%
   scroll_box(height = "400px")
 ```
 
-Conclusion
-==========================================================
+##Conclusion
+
 Using the Final Table, we found the average toxicity level for each vegetable. 
 
 Below are the broccoli and cauliflower averages (in that order)
@@ -121,8 +118,8 @@ cauliflower.tox <- mean(ru16$toxicity, na.rm = TRUE)
 cauliflower.tox
 ```
 
-Conclusion cont.
-===========================================================
+##Conclusion cont.
+
 T Tests also showed that there is no significant difference between the two. 
 ```{r, echo=FALSE}
 t.test(ru15$toxicity, ru16$toxicity)
