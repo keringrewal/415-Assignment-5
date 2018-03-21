@@ -1,0 +1,165 @@
+---
+title: "NOAA Weather Station Bouy 46035"
+author: "Janie Briglio and Kerin Grewal"
+date: "March 20, 2018"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(knitr)
+library(kableExtra)
+library(tidyverse)
+library(stringr)
+
+
+# Read in data from website
+
+url1 <- "http://www.ndbc.noaa.gov/view_text_file.php?filename=46035h"
+url2 <- ".txt.gz&dir=data/historical/stdmet/"
+
+years <- c(1985:2017)[-29]
+
+years <- str_c(url1, years, url2, sep = "")
+
+filenames <- str_c("yr", years, sep = "")
+
+# separates file into each year
+
+x <- length(years)
+
+for (i in 1:x){
+  
+  suppressMessages(
+    assign(filenames[i], read_table(years[i], col_names = TRUE))
+  )
+  
+  file <- get(filenames[i])
+  
+  colnames(file)[1] <-"Year"
+  
+  if (i < 21) {
+    file <- file %>% mutate(mm = "00")
+  }
+  
+  file <- file %>% select(Year, MM, DD, hh, mm, ATMP, WTMP)
+  
+  if (i >= 23) {
+    file <- file[-1,]
+  }
+  
+  if (i < 15) {
+    file[1] <- 1900 + file[1]
+  }
+  
+
+  if(i == 1){
+    my_data <- file
+  }
+  
+  else{
+    my_data <- rbind.data.frame(my_data, file)
+  }
+  
+}
+
+
+mydata <- filter(my_data, `hh`==12 )
+  
+mydata2 <- my_data %>% mutate(ATMP = as.numeric(ATMP), 
+                              WTMP = as.numeric(WTMP), 
+                              MM = as.integer(MM), 
+                              DD = as.integer(DD)) %>%
+  mutate(ATMP = ifelse(ATMP >= 99.0, NA, ATMP)) %>%
+  mutate(WTMP = ifelse(WTMP >= 99.0, NA, WTMP))
+
+mydata2 <- na.omit(mydata2)
+```
+
+##Air Temperature Averages
+
+```{r, echo= FALSE}
+
+
+#average air temperature for each year 
+ATMPavgs <- mydata2 %>% 
+  group_by(Year) %>%
+  dplyr::summarise("Mean" = mean(ATMP), "Number of Observations" = n())
+
+kable(ATMPavgs, caption = "Air Temp Averages", "html") %>%
+  kable_styling() %>%
+  scroll_box(height = "400px")
+
+
+```
+
+##Air Temperature Time Series
+
+```{r, echo= FALSE}
+
+#overall data with individual air and water temperature for each date in each year
+mydata3 <- mydata2 %>% 
+  unite("Date", c("Year", "MM", "DD"), sep = "-") %>% 
+  mutate(Date = as.Date(Date))
+
+
+#Time series code 
+ts1 <- mydata3
+ts1 <- ts1[2:8744, 4]
+ts2 <- as.vector(t(ts1))
+ts3 <- ts(ts2, start = c(1985, 1), frequency = 30)
+ts.plot(ts3, gpars=list(xlab="date", ylab="ATMP", col= 'green', lty=c(1:3), main = "Time Series of Air Temp from 1985 to 2017"))
+
+```
+
+##Water Temperature Averages
+
+```{r, echo=FALSE}
+#average water temperature for each year 
+WTMPavgs <- mydata2 %>% 
+  group_by(Year) %>%
+  dplyr::summarise(Mean = mean(WTMP), "Number of Observations"= n())
+
+kable(WTMPavgs, caption = "Water Temp Averages", "html") %>%
+  kable_styling() %>%
+  scroll_box(height = "400px")
+```
+
+
+##Water Temperature Time Series
+
+```{r, echo= FALSE}
+#Time series code 
+ts4 <- mydata3
+ts4 <- ts4[2:8744, 5]
+ts5 <- as.vector(t(ts4))
+ts6 <- ts(ts5, start = c(1985, 1), frequency = 30)
+ts.plot(ts6, gpars=list(xlab="date", ylab="WTMP", col= 'green', lty=c(1:3), main = "Time Series of Water Temp from 1985 to 2017"))
+
+
+```
+
+
+##Comparing Air Temp from 1985 to 2017
+
+Statistical testing comparing air temperature in 1985 to 2017:
+```{r, echo=FALSE}
+t.test(mydata3$ATMP[1:90], mydata3$ATMP[8382:8744])
+```
+This data shows that there has been a difference between the air temp in 1985 and the air temp in 2017.
+
+
+##Comparing Water Temp from 1985 to 2017
+
+Statistical testing comparing water temperature in 1985 to 2017:
+```{r, echo= FALSE}
+t.test(mydata3$WTMP[1:90], mydata3$WTMP[8382:8744])
+```
+This data shows that there has also been a difference between the water temp in 1985 and the water temp in 2017
+
+
+##Results
+
+The sampling method did affect the evaluation of temperature change. The weather and amount of sunlight changes through out the day, making it so that the water and air temperature can vary through out the day. Limiting the sampling to just once a day takes away this aspect of the overall temperatures and can impact the overall determination of temperature change. The difference in water and air temperature from 1985 to 2017 was very slight, but in both cases it decreased.
+
+
