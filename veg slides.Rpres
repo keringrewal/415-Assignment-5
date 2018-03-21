@@ -26,13 +26,15 @@ The data was cleaned and added to through pipes that:
 - joined tables together 
 
 
-Cleaned Tables
+Cleaned Table
 ========================================================
 
 ```{r, echo=FALSE}
 library(readxl)
 library(dplyr)
 library(tidyverse)
+library(knitr)
+library(kableExtra)
 veg.1 <- read_xlsx("veg1.xlsx")
 a <- apply(veg.1, 2, n_distinct)
 b <- names(a[a==1])
@@ -64,29 +66,65 @@ ru10 <- ru9 %>% separate(6, c("chem", "value"), sep = "=")
 ru11 <- ru10 %>% separate(6, c("chem", "spaces"), sep = -1)
 ru12 <- ru11 %>% separate(8, c("value", "spaces"), sep = -1)
 ru13 <- ru12 %>% select("Commodity", "type", "chem")
-tox.vals <- read_xlsx("Toxicity Values.xlsx")
-tox.vals <- tox.vals %>% mutate(chem = str_trim(chem, side = "both")) %>%
-  mutate(toxicity = as.numeric(toxicity))
-ru14 <- full_join(ru13, tox.vals, by="chem")
-ru14
+kable(ru13, caption = "Cleaned Data", "html") %>%
+  kable_styling() %>%
+  scroll_box(height = "400px")
+
 ```
 
 Toxicity Table
 ========================================================
+After finding the restricted use chemicals, we found the toxicity levels for each chemical.
 ```{r, echo=FALSE}
 library(readxl)
 library(dplyr)
 library(tidyverse)
+library(knitr)
+library(kableExtra)
 tox.vals <- read_xlsx("Toxicity Values.xlsx")
 tox.vals <- tox.vals %>% mutate(chem = str_trim(chem, side = "both")) %>%
   mutate(toxicity = as.numeric(toxicity))
-row.names(tox.vals) <- tox.vals$chem
-matrix(tox.vals$toxicity)
-barplot(tox.vals$toxicity, names.arg = rownames(tox.vals), 
-        las=2,
-        axisnames=TRUE,
-        main="Toxicity Values",
-        border="black",
-        col="blue", 
-        horiz = TRUE)
+kable(tox.vals, caption = "Toxicity Table", "html") %>%
+  kable_styling() %>%
+  scroll_box(height = "400px")
+```
+
+Final Table 
+=========================================================
+Then we used dplyr to combine the data and see which vegetables had been exposed to which toxicity levels. 
+```{r, echo=FALSE}
+library(readxl)
+library(dplyr)
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+tox.vals <- read_xlsx("Toxicity Values.xlsx")
+tox.vals <- tox.vals %>% mutate(chem = str_trim(chem, side = "both")) %>%
+  mutate(toxicity = as.numeric(toxicity))
+ru14 <- full_join(ru13, tox.vals, by="chem")
+kable(ru14, caption = "Final Table", "html") %>%
+  kable_styling() %>%
+  scroll_box(height = "400px")
+```
+
+Conclusion
+==========================================================
+Using the Final Table, we found the average toxicity level for each vegetable. 
+
+Below are the broccoli and cauliflower averages (in that order)
+```{r, echo=FALSE}
+ru15 <- ru14 %>% filter(Commodity=="BROCCOLI")
+broccoli.tox <- mean(ru15$toxicity, na.rm = TRUE)
+broccoli.tox
+
+ru16 <- ru14 %>% filter(Commodity=="CAULIFLOWER")
+cauliflower.tox <- mean(ru16$toxicity, na.rm = TRUE)
+cauliflower.tox
+```
+
+Conclusion cont.
+===========================================================
+T Tests also showed that there is no significant difference between the two. 
+```{r, echo=FALSE}
+t.test(ru15$toxicity, ru16$toxicity)
 ```

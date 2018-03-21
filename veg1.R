@@ -3,7 +3,6 @@ library(readxl)
 library(plyr)
 library(dplyr)
 
-
 veg.1 <- read_xlsx("veg1.xlsx")
 a <- apply(veg.1, 2, n_distinct)
 a[a>1]
@@ -19,11 +18,8 @@ veg.3 <- dplyr::rename(veg.2,
 veg.4 <- separate(veg.3, Category, into = c("label", "quant"), sep=",")
 
 ru <- filter(veg.4, label=="RESTRICTED USE CHEMICAL")
-
 ru1 <- ru %>% select(label, quant) %>% unique()
-
 ru1 %>% print(n=30)
-
 ru2 <- ru1 %>% separate(2, c("type", "chemical"), sep = ":")
 ru3 <- ru2 %>% separate("chemical", c("chem", "number"), sep = "=")
 ru4 <- ru3 %>% separate("chem", c("a", "chem"), sep = 2)
@@ -56,21 +52,16 @@ ru13 <- ru12 %>% select("Commodity", "type", "chem")
 #full table of each vegetable and the toxicity of the chemcials present 
 ru14 <- full_join(ru13, tox.vals, by="chem")
 ru14
-row.names(tox.vals) <- tox.vals$chem
-matrix(tox.vals$toxicity)
-barplot(tox.vals$toxicity, names.arg = rownames(tox.vals), 
-        las=2,
-        axisnames=TRUE,
-        main="Toxicity Values",
-        border="black",
-        col="blue", 
-        horiz = TRUE)
 
-## get CAS #
-## find info at https://cfpub.epa.gov/ecotox/  (go to beta)
-## or
-## https://comptox.epa.gov/dashboard
+#finding the average levels of toxicity for each vegetable
+ru15 <- ru14 %>% filter(Commodity=="BROCCOLI")
+broccoli.tox <- mean(ru15$toxicity, na.rm = TRUE)
+broccoli.tox
 
+ru16 <- ru14 %>% filter(Commodity=="CAULIFLOWER")
+cauliflower.tox <- mean(ru16$toxicity, na.rm = TRUE)
+cauliflower.tox
 
-##  Toxicity > Effect Level
-#
+#comparing the toxicities 
+t.test(ru15$toxicity, ru16$toxicity)
+#there is no significant difference in toxicity levels in each vegetable 

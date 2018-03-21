@@ -26,60 +26,6855 @@ The data was cleaned and added to through pipes that:
 - joined tables together 
 
 
-Cleaned Tables
+Cleaned Table
 ========================================================
 
-
-```
-# A tibble: 606 x 4
-   Commodity type           chem                toxicity
-   <chr>     <chr>          <chr>                  <dbl>
- 1 BROCCOLI  " HERBICIDE"   PARAQUAT               223  
- 2 BROCCOLI  " INSECTICIDE" ABAMECTIN              630  
- 3 BROCCOLI  " INSECTICIDE" BETA-CYFLUTHRIN         NA  
- 4 BROCCOLI  " INSECTICIDE" BIFENTHRIN              42.5
- 5 BROCCOLI  " INSECTICIDE" CHLORANTRANILIPROLE   5000  
- 6 BROCCOLI  " INSECTICIDE" CHLORPYRIFOS           151  
- 7 BROCCOLI  " INSECTICIDE" CYFLUTHRIN             500  
- 8 BROCCOLI  " INSECTICIDE" EMAMECTIN BENZOATE      76.0
- 9 BROCCOLI  " INSECTICIDE" ESFENVALERATE           88.5
-10 BROCCOLI  " INSECTICIDE" IMIDACLOPRID           256  
-# ... with 596 more rows
-```
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:400px; "><table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>Cleaned Data</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Commodity </th>
+   <th style="text-align:left;"> type </th>
+   <th style="text-align:left;"> chem </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+  </tr>
+</tbody>
+</table></div>
 
 Toxicity Table
 ========================================================
+After finding the restricted use chemicals, we found the toxicity levels for each chemical.
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:400px; "><table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>Toxicity Table</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> chem </th>
+   <th style="text-align:right;"> toxicity </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> THIAMETHOXAM </td>
+   <td style="text-align:right;"> 1563.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DIMETHOATE </td>
+   <td style="text-align:right;"> 160.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+   <td style="text-align:right;"> 70.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> PRONAMIDE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+   <td style="text-align:right;"> 4640.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+   <td style="text-align:right;"> 16.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+</tbody>
+</table></div>
+
+Final Table 
+=========================================================
+Then we used dplyr to combine the data and see which vegetables had been exposed to which toxicity levels. 
+<div style="border: 1px solid #ddd; padding: 5px; overflow-y: scroll; height:400px; "><table class="table" style="margin-left: auto; margin-right: auto;">
+<caption>Final Table</caption>
+ <thead>
+  <tr>
+   <th style="text-align:left;"> Commodity </th>
+   <th style="text-align:left;"> type </th>
+   <th style="text-align:left;"> chem </th>
+   <th style="text-align:right;"> toxicity </th>
+  </tr>
+ </thead>
+<tbody>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIAMETHOXA </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+   <td style="text-align:right;"> 160.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+   <td style="text-align:right;"> 70.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+   <td style="text-align:right;"> 160.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+   <td style="text-align:right;"> 70.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+   <td style="text-align:right;"> 160.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+   <td style="text-align:right;"> 70.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+   <td style="text-align:right;"> 160.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+   <td style="text-align:right;"> 70.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIMETHOATE </td>
+   <td style="text-align:right;"> 160.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> FENPROPATHRIN </td>
+   <td style="text-align:right;"> 70.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORANTRANILIPROLE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> NALED </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> OXYDEMETON-METHYL </td>
+   <td style="text-align:right;"> 48.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> OTHER </td>
+   <td style="text-align:left;"> DICHLOROPROPENE </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BETA-CYFLUTHRIN </td>
+   <td style="text-align:right;"> NA </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> IMIDACLOPRID </td>
+   <td style="text-align:right;"> 256.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+   <td style="text-align:right;"> 4640.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+   <td style="text-align:right;"> 16.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+   <td style="text-align:right;"> 4640.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+   <td style="text-align:right;"> 16.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+   <td style="text-align:right;"> 4640.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+   <td style="text-align:right;"> 16.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+   <td style="text-align:right;"> 4640.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+   <td style="text-align:right;"> 16.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PRONAMIDE </td>
+   <td style="text-align:right;"> 5000.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ABAMECTIN </td>
+   <td style="text-align:right;"> 630.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYPERMETHRIN </td>
+   <td style="text-align:right;"> 250.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIFLUBENZURON </td>
+   <td style="text-align:right;"> 4640.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHAMIDOPHOS </td>
+   <td style="text-align:right;"> 16.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> BROCCOLI </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> HERBICIDE </td>
+   <td style="text-align:left;"> PARAQUAT </td>
+   <td style="text-align:right;"> 223.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> BIFENTHRIN </td>
+   <td style="text-align:right;"> 42.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CHLORPYRIFOS </td>
+   <td style="text-align:right;"> 151.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> CYFLUTHRIN </td>
+   <td style="text-align:right;"> 500.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DIAZINON </td>
+   <td style="text-align:right;"> 235.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> DISULFOTON </td>
+   <td style="text-align:right;"> 2.60 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> EMAMECTIN BENZOATE </td>
+   <td style="text-align:right;"> 76.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ESFENVALERATE </td>
+   <td style="text-align:right;"> 88.50 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> GAMMA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 55.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> LAMBDA-CYHALOTHRIN </td>
+   <td style="text-align:right;"> 20.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> METHOMYL </td>
+   <td style="text-align:right;"> 27.40 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> PERMETHRIN </td>
+   <td style="text-align:right;"> 1300.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> THIODICARB </td>
+   <td style="text-align:right;"> 50.00 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> CAULIFLOWER </td>
+   <td style="text-align:left;"> INSECTICIDE </td>
+   <td style="text-align:left;"> ZETA-CYPERMETHRIN </td>
+   <td style="text-align:right;"> 0.16 </td>
+  </tr>
+  <tr>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> NA </td>
+   <td style="text-align:left;"> THIAMETHOXAM </td>
+   <td style="text-align:right;"> 1563.00 </td>
+  </tr>
+</tbody>
+</table></div>
+
+Conclusion
+==========================================================
+Using the Final Table, we found the average toxicity level for each vegetable. 
+
+Below are the broccoli and cauliflower averages (in that order)
 
 ```
-         [,1]
- [1,]  223.00
- [2,]  630.00
- [3,]      NA
- [4,]   42.50
- [5,] 5000.00
- [6,]  151.00
- [7,]  500.00
- [8,]   76.00
- [9,]   88.50
-[10,]  256.00
-[11,]   20.00
-[12,]   27.40
-[13,]  250.00
-[14,]   48.00
-[15,] 1300.00
-[16,] 1563.00
-[17,]    0.16
-[18,]      NA
-[19,]  235.00
-[20,]  160.00
-[21,]    2.60
-[22,]   70.60
-[23,]  250.00
-[24,] 5000.00
-[25,] 4640.00
-[26,]   55.00
-[27,]   16.00
-[28,]   50.00
+[1] 508.2218
 ```
 
-![plot of chunk unnamed-chunk-2](veg slides-figure/unnamed-chunk-2-1.png)
+```
+[1] 436.4742
+```
+
+Conclusion cont.
+===========================================================
+T Tests also showed that there is no significant difference between the two. 
+
+```
+
+	Welch Two Sample t-test
+
+data:  ru15$toxicity and ru16$toxicity
+t = 0.75663, df = 512.03, p-value = 0.4496
+alternative hypothesis: true difference in means is not equal to 0
+95 percent confidence interval:
+ -114.5461  258.0413
+sample estimates:
+mean of x mean of y 
+ 508.2218  436.4742 
+```
